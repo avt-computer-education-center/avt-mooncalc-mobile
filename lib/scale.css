@@ -1,0 +1,707 @@
+/*
+ * SEC Web App SDK 1.0
+ *
+ * Copyright ¨Ï 2013 Samsung Electronics Co., Ltd. All rights reserved.
+ */
+.w320 body.autoscale {
+  /*font-size: 41.2%;*/
+  font-size: 62.5%;
+}
+
+/* default - font-size: 62.5%; */
+.w480 body.autoscale {
+  font-size: 62.5%;
+}
+
+.w720 body.autoscale {
+  font-size: 93.8%;
+}
+
+.w800 body.autoscale {
+  font-size: 93.8%;
+}
+
+.w1080 body.autoscale {
+  font-size: 140.6%;
+}
+
+.w960 body.autoscale {
+  font-size: 62.5%;
+}
+
+.w1280 body.autoscale {
+  font-size: 83.3%;
+}
+
+
+.autoscale .dvc-davinci-page-style.sec-header > .ui-content {
+  top: 4.3em;
+}
+.autoscale .dvc-davinci-page-style.sec-footer > .ui-content {
+  bottom: 4.3em;
+}
+.autoscale input.ui-input-text,
+.autoscale textarea.ui-input-text {
+  line-height: 1.4em;
+  font-size: 1.6em;
+}
+.autoscale .aligned {
+  font-size: inherit;
+  height: 3.9em;
+}
+.autoscale .aligned > *:only-child > *:only-child {
+  font-size: 1.0em;
+  padding: 0em 1.0em;
+}
+.autoscale .aligned > .ui-btn-inner {
+  padding: 0em;
+}
+.autoscale .ui-header .ui-btn-right,
+.autoscale .ui-footer .ui-btn-right {
+  right: 0.5em;
+}
+.autoscale .ui-header .ui-btn-left,
+.autoscale .ui-header .ui-btn-right,
+.autoscale .ui-footer .ui-btn-left,
+.autoscale .ui-footer .ui-btn-right {
+  top: 0.4em;
+}
+.autoscale .ui-header .ui-title,
+.autoscale .ui-footer .ui-title {
+  font-size: 1.6em;
+}
+.autoscale .ui-btn-inner {
+  font-size: 1.6em;
+  padding: .6em 2.0em;
+}
+.ui-controlgroup .ui-checkbox label, .ui-controlgroup .ui-radio label {
+  font-size: inherit;
+}
+.autoscale .ui-progressbar {
+  height: 1.6em;
+}
+.autoscale .ui-label {
+  font-size: 1.6em;  
+}
+.autoscale .ui-slider-inneroffset {
+  margin: 0 1.4em;
+}
+.autoscale label.ui-slider {
+  font-size: 1.6em;
+  margin: 0 2% 0 2.0em;
+  top: 0.4em;
+}
+.autoscale label.ui-input-text {
+  font-size: 1.6em;
+}
+.autoscale label.ui-select {
+  font-size: 1.6em;
+}
+.autoscale span.ui-slider-label {
+  font-size: 1.6em;
+}
+.autoscale div.ui-slider {
+  height: 1.5em;
+  margin: 0 2% 0 2.0em;
+  top: 0.4em;
+}
+.autoscale div.ui-slider-bg {
+  padding-right: 0.1em;
+}
+.autoscale div.ui-slider-switch {
+  height: 3.2em;
+}
+.autoscale .ui-controlgroup a.ui-slider-handle,
+.autoscale a.ui-btn.ui-slider-handle {
+  width: 2.8em;
+  height: 2.8em;
+  margin: -1.5em 0 0 -1.5em;
+}
+.autoscale div.ui-slider-mini {
+  height: 1.2em;
+  margin-left: 1.0em;
+  top: 0.2em;
+}
+.autoscale div.ui-slider-switch .ui-slider-handle {
+  margin: 0.1em 0 0 -1.5em;
+}
+.autoscale div.ui-slider-mini a.ui-slider-handle {
+  height: 1.4em;
+  width: 1.4em;
+  margin: -0.75em 0 0 -0.75em;
+}
+.autoscale div.ui-slider-mini a.ui-slider-handle .ui-btn-inner {
+  height: 3.0em;
+  width: 3.0em;
+  margin: -0.9em 0 0 -0.9em;
+}
+.autoscale .ui-btn-corner-all {
+  -moz-border-radius: 1.5em /*{global-radii-buttons}*/;
+  -webkit-border-radius: 1.5em /*{global-radii-buttons}*/;
+  border-radius: 1.5em /*{global-radii-buttons}*/;
+}
+.autoscale .ui-header .ui-btn-inner,
+.autoscale .ui-footer .ui-btn-inner,
+.autoscale .ui-mini .ui-btn-inner {
+  font-size: 1.25em;
+  padding: .55em 1.1em .5em;
+}
+.autoscale .ui-header .ui-btn-icon-left .ui-btn-inner, 
+.autoscale .ui-footer .ui-btn-icon-left .ui-btn-inner, 
+.autoscale .ui-mini.ui-btn-icon-left .ui-btn-inner, 
+.autoscale .ui-mini .ui-btn-icon-left .ui-btn-inner {
+  padding-left: 2.4em;
+}
+.autoscale .ui-btn-icon-bottom .ui-btn-inner {
+  padding-bottom: 2.4em;
+}
+.autoscale .ui-btn-icon-top .ui-btn-inner {
+  padding-top: 2.4em;
+}
+.autoscale .ui-btn-icon-top .ui-icon {
+  top: 1.0em;
+}
+.autoscale .ui-btn-icon-notext .ui-btn-inner {
+  padding: 0;
+}
+.autoscale .ui-btn-inner .ui-icon {
+  font-size: 0.625em;
+}
+.autoscale .ui-mini .ui-btn-inner .ui-icon {
+  font-size: 0.8em;
+}
+.autoscale .ui-btn-icon-notext .ui-btn-inner .ui-icon {
+  margin: 0.2em 0.1em 0.2em 0.3em;
+}
+.autoscale .ui-icon {
+  width: 1.8em;
+  height: 1.8em;
+  background-position-y: 0em;
+}
+.autoscale .ui-btn-icon-notext {
+  width: 2.4em;
+  height: 2.4em;
+}
+.autoscale .ui-header .ui-btn-icon-left .ui-icon,
+.autoscale .ui-footer .ui-btn-icon-left .ui-icon,
+.autoscale .ui-mini.ui-btn-icon-left .ui-icon,
+.autoscale .ui-mini .ui-btn-icon-left .ui-icon {
+  left: 0.5em;
+}
+.autoscale .ui-btn-icon-left > .ui-btn-inner > .ui-icon,
+.autoscale .ui-btn-icon-right > .ui-btn-inner > .ui-icon {
+  margin-top: -0.9em;
+}
+.autoscale .ui-btn-icon-left .ui-icon {
+  left: 1.0em;
+}
+.autoscale .ui-icon,
+.autoscale .ui-icon-searchfield:after {
+  -moz-border-radius: 0.9em;
+  -webkit-border-radius: 0.9em;
+  border-radius: 0.9em;
+}
+.autoscale .ui-icon-plus,
+.autoscale .ui-icon-minus,
+.autoscale .ui-icon-delete,
+.autoscale .ui-icon-arrow-r,
+.autoscale .ui-icon-arrow-l,
+.autoscale .ui-icon-arrow-u,
+.autoscale .ui-icon-arrow-d,
+.autoscale .ui-icon-check,
+.autoscale .ui-icon-gear,
+.autoscale .ui-icon-refresh,
+.autoscale .ui-icon-forward,
+.autoscale .ui-icon-back,
+.autoscale .ui-icon-grid,
+.autoscale .ui-icon-star,
+.autoscale .ui-icon-alert,
+.autoscale .ui-icon-info,
+.autoscale .ui-icon-home,
+.autoscale .ui-icon-search,
+.autoscale .ui-icon-searchfield:after,
+.autoscale .ui-icon-checkbox-off,
+.autoscale .ui-icon-checkbox-on,
+.autoscale .ui-icon-radio-off,
+.autoscale .ui-icon-radio-on {
+  -moz-background-size: 77.6em 1.8em;
+  -o-background-size: 77.6em 1.8em;
+  -webkit-background-size: 77.6em 1.8em;
+  background-size: 77.6em 1.8em;
+}
+.autoscale .ui-icon-minus {
+  background-position: -3.6em 50%;
+}
+.autoscale .ui-icon-delete {
+  background-position: -7.2em 50%;
+}
+.autoscale .ui-icon-arrow-r {
+  background-position: -10.8em 50%;
+}
+.autoscale .ui-icon-arrow-l {
+  background-position: -14.4em 50%;
+}
+.autoscale .ui-icon-arrow-u {
+  background-position: -18em 50%;
+}
+.autoscale .ui-icon-arrow-d {
+  background-position: -21.6em 50%;
+}
+.autoscale .ui-icon-check {
+  background-position: -25.2em 50%;
+}
+.autoscale .ui-icon-gear {
+  background-position: -28.8em 50%;
+}
+.autoscale .ui-icon-refresh {
+  background-position: -32.4em 50%;
+}
+.autoscale .ui-icon-forward {
+  background-position: -36em 50%;
+}
+.autoscale .ui-icon-back {
+  background-position: -39.6em 50%;
+}
+.autoscale .ui-icon-grid {
+  background-position: -43.2em 50%;
+}
+.autoscale .ui-icon-star {
+  background-position: -46.8em 50%;
+}
+.autoscale .ui-icon-alert {
+  background-position: -50.4em 50%;
+}
+.autoscale .ui-icon-info {
+  background-position: -54em 50%;
+}
+.autoscale .ui-icon-home {
+  background-position: -57.6em 50%;
+}
+.autoscale .ui-icon-search,
+.autoscale .ui-icon-searchfield:after {
+  background-position: -61.2em 50%;
+}
+.autoscale .ui-icon-checkbox-off {
+  background-position: -68.4em 50%;
+}
+.autoscale .ui-icon-checkbox-on {
+  background-position: -64.8em 50%;
+}
+.autoscale .ui-icon-radio-off {
+  background-position: -75.6em 50%;
+}
+.autoscale .ui-icon-radio-on {
+  background-position: -72em 50%;
+}
+.autoscale .ui-checkbox .ui-icon,
+.autoscale .ui-selectmenu-list .ui-icon {
+  -moz-border-radius: 0.3em;
+  -webkit-border-radius: 0.3em;
+  border-radius: 0.3em;
+}
+.autoscale .ui-checkbox .ui-btn-icon-left .ui-btn-inner,
+.autoscale .ui-radio .ui-btn-icon-left .ui-btn-inner {
+  padding-left: 2.81em;
+}
+.autoscale .ui-checkbox .ui-btn-icon-left .ui-icon,
+.autoscale .ui-radio .ui-btn-icon-left .ui-icon {
+  left: 1.5em;
+}
+.autoscale .ui-icon-loading {
+  background: url(images/ajax-loader.gif);
+  background-size: 4.6em 4.6em;
+}
+.autoscale .ui-indicator {
+  padding: 0.4em;
+  font-size: 1.0em;
+  min-width: 1.0em;
+  min-height: 1.0em;
+}
+.autoscale .ui-numberindicator {
+  font-size: 1.6em;  
+}
+.autoscale .ui-barindicator > div {
+  min-width: 0.4em;
+  height: 0.6em;
+  -webkit-border-radius: 0.3em;
+}
+.autoscale .ui-circleindicator > div {
+  width: 1.0em;
+  height: 1.0em;
+  -webkit-border-radius: 0.5em;
+}
+.autoscale .ui-mediacontrol {
+  height: 2.3em;
+}
+.autoscale .ui-mediacontrol > * {
+  height: 2.2em;
+}
+.autoscale .ui-mediacontrol > *.ui-btn {
+  background-size: 22.0em;
+}
+.autoscale .ui-mediacontrol > .ui-btn-play {
+  width: 2.2em;
+}
+.autoscale .ui-mediacontrol > .ui-btn-play.on {
+  background-position-x: -4em;
+}
+.autoscale .ui-mediacontrol > .ui-slider-progress + .ui-slider {
+  top: 0.5em;
+  left: 3.4em;
+  right: 12.0em;
+  margin: 0em;
+}
+.autoscale .ui-mediacontrol > .ui-slider-volume + .ui-slider {
+  top: 0.5em;
+  right: 5.8em;
+  width: 5.0em;
+  margin: 0em;
+}
+.autoscale .ui-mediacontrol > .ui-btn-mute {
+  right: 2.4em;
+  width: 2.2em;
+  background-position-x: -11.8em;
+}
+.autoscale .ui-mediacontrol > .ui-btn-mute.on {
+  background-position-x: -7.8em;
+}
+.autoscale .ui-mediacontrol > .ui-btn-fullscreen {
+  right: 0em;
+  width: 2.2em;
+  background-position-x: -15.92em;
+}
+.autoscale .ui-mediacontrol > .ui-btn-fullscreen.on {
+  background-position-x: -19.92em;
+}
+.autoscale .ui-video {
+  min-width: 4.0em;
+  min-height: 4.0em;
+  height: 24.0em;
+}
+.autoscale .ui-video.fullscreen {
+  height: auto;
+}
+.autoscale .ui-video > .ui-mediacontrol.ui-hidden {
+  bottom: -2.3em;
+}
+@-webkit-keyframes hide {
+  from {
+    bottom: 0px;
+  }
+  to {
+    bottom: -2.4em;
+  }
+}
+@-webkit-keyframes show {
+  from {
+    bottom: -2.4em;
+  }
+  to {
+    bottom: 0px;
+  }
+}
+.autoscale .ui-video > .ui-mediacontrol {
+  height: 2.3em;
+}
+.autoscale .ui-audio {
+  height: 2.4em !important;
+}
+.autoscale .ui-audio .audio {
+  width: 32.0em;
+}
+.autoscale .ui-audio > .ui-mediacontrol {
+  height: 2.4em;
+}
+.autoscale .ui-audio .ui-mediacontrol > .ui-slider-progress + .ui-slider {
+  left: 3.4em;
+  right: 12.4em;
+  margin: 0em;
+}
+.autoscale .ui-audio .ui-mediacontrol > .ui-slider-volume + .ui-slider {
+  right: 3.6em;
+  width: 7.4em;
+}
+.autoscale .ui-audio .ui-mediacontrol > .ui-btn-mute {
+  right: 0em;
+  width: 2.2em;
+}
+.autoscale .ui-calendar {
+  font-size: 1.2em;
+  width: 28.0em !important;
+}
+.autoscale .ui-calendar .title,
+.autoscale .ui-calendar td,
+.autoscale .ui-calendar th {
+  font-size: 1.6em;
+}
+.autoscale .ui-calendar .titlebar {
+  height: 3.0em;
+  line-height: 3.0em;
+}
+.autoscale .ui-calendar .titlebar .prev {
+  margin-top: 0.2em;
+  margin-left: 0.2em;
+  width: 2.4em;
+  height: 2.4em;
+}
+.autoscale .ui-calendar .titlebar .next {
+  margin-top: 0.2em;
+  margin-right: 0.2em;
+  width: 2.4em;
+  height: 2.4em;
+}
+.autoscale .ui-calendar .dayarea tr {
+  height: 3.0em;
+}
+.autoscale .ui-picker-item {
+  min-width: 4.5em;
+  height: 10.0em;
+  margin: 0 0.1em;
+  box-shadow: 0 0.1em 0.1em rgba(255, 255, 255, 0.3);
+  -webkit-box-shadow: 0 0.1em 0.1em rgba(255, 255, 255, 0.3);
+}
+.autoscale .ui-picker-wrapper-back {
+  margin: 0 0.3em;
+  min-width: 1.9em;
+  height: 10.0em;
+}
+.autoscale .ui-picker-wrapper {
+  margin: 1.7em 0;
+  min-width: 1.9em;
+  height: 1.7em;
+  font-size: 2.0em;
+}
+.autoscale .ui-picker-wrapper > .ui-picker-scroller {
+  padding: 0em 0.5em;
+}
+.autoscale .ui-picker-scroller > div {
+  height: 1.7em;
+  line-height: 1.7em;
+  font-size: 1.0em;
+}
+.autoscale .ui-picker-bar {
+  top: -6.9em;
+  height: 3.2em;
+  box-shadow: 0 0.1em 0.3em rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 0.1em 0.3em rgba(0, 0, 0, 0.5);
+}
+.autoscale .ui-input-state .ui-focus-column {
+  -webkit-box-shadow: inset 0 0 0.3em #ff0000;
+}
+.autoscale .ui-datepicker {
+  width:19.0em !important;
+  min-width: 19.0em;
+  height: 10.0em !important;
+  margin-top: 1.0em;
+  padding: 2.5em 2.0em;
+}
+
+.autoscale .ui-datepicker .ui-date-year .ui-picker-wrapper { width:3.2em; }
+.autoscale .ui-datepicker .ui-date-month .ui-picker-wrapper { width:2.95em; }
+.autoscale .ui-datepicker .ui-date-day .ui-picker-wrapper { width:2.1em; }
+.autoscale .ui-timepicker {
+  width:16.0em !important;
+  min-width: 16.0em;
+  height: 10.0em !important;
+  margin-top: 1.0em;
+  padding: 2.5em 2.0em;
+}
+.autoscale .ui-timepicker .ui-time-hour .ui-picker-wrapper { width:2.1em; }
+.autoscale .ui-timepicker .ui-time-minute .ui-picker-wrapper { width:2.1em; }
+.autoscale .ui-timepicker .ui-time-ampm .ui-picker-wrapper { width:2.5em; }
+.autoscale .ui-menu {
+  font-size: 1.6em;
+  margin: 0em;
+}
+.autoscale .ui-menu ul {
+  min-height: 1.25em;
+}
+.autoscale .ui-menu li {
+  min-height: 1.25em;
+}
+.autoscale .ui-menu > ul > li {
+  padding: 0.63em 1.25em;
+}
+.autoscale .ui-menu ul.ui-submenu .ui-node {
+  padding: 0.31em 0.63em;
+}
+.autoscale .ui-maps {
+  min-width: 20.0em;
+  height: 10.0em;
+  min-height: 10.0em;
+}
+.autoscale .ui-maps > .ui-maps-unable-text {
+  font-size: 3.0em;
+}
+.autoscale .ui-android.ui-android-display {
+  width: 6.0em !important;
+  height: 6.0em !important;
+  margin: 0.5em 0px;
+}
+.autoscale .ui-android > .ui-android-button {
+  margin: 0px;
+}
+.autoscale .ui-android > .ui-android-button > .ui-btn-inner {
+  width: 3.2em;
+  height: 3.2em;
+  padding: 1.2em 1.4em;
+  font-size: 1.0em;
+  background-size: 48.0em 9.6em;
+}
+.autoscale .ui-android-alarm > .ui-android-button > .ui-btn-inner {
+  background-position: 1.4em 1.3em;
+}
+.autoscale .ui-android-alarm > .ui-android-button[data-theme='a'] > .ui-btn-inner,
+.autoscale .ui-android-alarm > .ui-android-button[data-theme='b'] > .ui-btn-inner {
+  background-position: 1.4em -5.2em;
+}
+.autoscale .ui-android-bluetooth > .ui-android-button > .ui-btn-inner {
+  background-position: -5em 1.3em;
+}
+.autoscale .ui-android-bluetooth > .ui-android-button[data-theme='a'] > .ui-btn-inner,
+.autoscale .ui-android-bluetooth > .ui-android-button[data-theme='b'] > .ui-btn-inner {
+  background-position: -5em -5.2em;
+}
+.autoscale .ui-android-calendar > .ui-android-button > .ui-btn-inner {
+  background-position: -11.4em 1.3em;
+}
+.autoscale .ui-android-calendar > .ui-android-button[data-theme='a'] > .ui-btn-inner,
+.autoscale .ui-android-calendar > .ui-android-button[data-theme='b'] > .ui-btn-inner {
+  background-position: -11.4em -5.2em;
+}
+.autoscale .ui-android-call > .ui-android-button > .ui-btn-inner {
+  background-position: -17.8em 1.3em;
+}
+.autoscale .ui-android-call > .ui-android-button[data-theme='a'] > .ui-btn-inner,
+.autoscale .ui-android-call > .ui-android-button[data-theme='b'] > .ui-btn-inner {
+  background-position: -17.8em -5.2em;
+}
+.autoscale .ui-android-contact > .ui-android-button > .ui-btn-inner {
+  background-position: -24.2em 1.3em;
+}
+.autoscale .ui-android-contact > .ui-android-button[data-theme='a'] > .ui-btn-inner,
+.autoscale .ui-android-contact > .ui-android-button[data-theme='b'] > .ui-btn-inner {
+  background-position: -24.2em -5.2em;
+}
+.autoscale .ui-android-filebrowser > .ui-android-button > .ui-btn-inner {
+  background-position: -30.6em 1.3em;
+}
+.autoscale .ui-android-filebrowser > .ui-android-button[data-theme='a'] > .ui-btn-inner,
+.autoscale .ui-android-filebrowser > .ui-android-button[data-theme='b'] > .ui-btn-inner {
+  background-position: -30.6emx -5.2em;
+}
+.autoscale .ui-android-message > .ui-android-button > .ui-btn-inner {
+  background-position: -37em 1.3em;
+}
+.autoscale .ui-android-message > .ui-android-button[data-theme='a'] > .ui-btn-inner,
+.autoscale .ui-android-message > .ui-android-button[data-theme='b'] > .ui-btn-inner {
+  background-position: -37em -5.2em;
+}
+.autoscale .ui-android-nfc > .ui-android-button > .ui-btn-inner {
+  background-position: -43.4em 1.3em;
+}
+.autoscale .ui-android-nfc > .ui-android-button[data-theme='a'] > .ui-btn-inner,
+.autoscale .ui-android-nfc > .ui-android-button[data-theme='b'] > .ui-btn-inner {
+  background-position: -43.4em -5.2em;
+}
+.autoscale .ui-li .ui-btn-inner a.ui-link-inherit,
+.autoscale .ui-li-static.ui-li {
+  padding: .7em 1.5em;
+  display: block;
+}
+.autoscale .ui-li-has-arrow .ui-btn-inner a.ui-link-inherit,
+.autoscale .ui-li-static.ui-li-has-arrow {
+  padding-right: 4.0em;
+}
+.autoscale .ui-li-desc {
+  font-size: 1.2em;
+}
+.autoscale .ui-li-heading {
+  font-size: 1.6em;
+}
+.autoscale .ui-li .ui-btn-inner a.ui-link-inherit .ui-li-desc {
+  font-size: 0.9em;
+}
+.autoscale .ui-li .ui-btn-inner a.ui-link-inherit .ui-li-heading {
+  font-size: 1.0em;
+}
+.autoscale .ui-li-divider {
+  padding: .5em 1.5em;
+  font-size: 1.4em;
+}
+.autoscale .ui-treeview {
+  min-height: 4.0em;
+  padding: 1.2em 0.2em;
+}
+.autoscale .ui-treeview ul,
+.autoscale .ui-treeview li {
+  min-height: 2.0em;
+}
+.autoscale .ui-treeview-li-item {
+  font-size: 1.6em;
+  border-radius: 0.2em;
+  padding: 0.1em 0.6em 0.2em 0.6em;
+}
+.autoscale .ui-tabview {
+  min-height: 10.0em;
+}
+.autoscale .ui-tabview.top > .ui-tabview-nav {
+  padding: 0.6em 1.2em 0;
+  height: 3.0em;
+}
+.autoscale .ui-tabview > .ui-tabview-nav {
+  font-size: 1.6em;
+  z-index: auto;
+}
+.autoscale .ui-tabview.top > .ui-tabview-nav > li.selected {
+  padding-bottom: 0.13em;
+  z-index: 20;
+}
+.autoscale .ui-tabview.top > .ui-tabview-nav > li {
+  margin: 0 0.2em 0 0;
+  padding: 0.364em 0.9em 0.1em;
+  min-width: 1.0em;
+  z-index: 1;
+}
+.autoscale .ui-tabview.top > .ui-tabview-wrapper {
+  top: 3.65em;
+  z-index: 10;
+}
+.autoscale .ui-tabview.bottom > .ui-tabview-wrapper {
+  bottom: 2.8em;
+  z-index: 10;
+}
+.autoscale .ui-tabview.bottom > .ui-tabview-nav {
+  height: 1.5em;
+}
+.autoscale .ui-imageview {
+  min-width: 6.0em;
+  height: 6.0em;
+}
+.autoscale div.ui-slider-switch {
+  width: 8em;
+}
+.autoscale .ui-treeview .ui-treeview-root.open > .ui-treeview-marker {
+  background-size: 10em;
+  background-position: -2em -0.4em;
+}
+.autoscale .ui-treeview .ui-treeview-root.closed > .ui-treeview-marker {
+  background-size: 10em;
+  background-position: -0.3em -0.4em;
+}
+
+.autoscale .ui-collapsible-heading {
+  font-size: inherit;
+}
+.autoscale .ui-icon-searchfield:after {
+  margin-top: -0.9em;
+  width: 1.8em;
+  height: 1.8em;
+}
+.autoscale .ui-collapsible-heading .ui-btn-inner, 
+.autoscale .ui-collapsible-heading .ui-btn-icon-left .ui-btn-inner {
+  padding: .6em 2.0em;
+}
+.autoscale .ui-controlgroup-label {
+  font-size: 1.6em;
+}

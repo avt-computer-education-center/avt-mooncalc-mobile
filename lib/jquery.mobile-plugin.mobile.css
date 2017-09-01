@@ -1,0 +1,121 @@
+/* start plugin : default */
+/*!
+ * SEC Web App SDK 1.0
+ *
+ * Copyright ¨Ï 2013 Samsung Electronics Co., Ltd. All rights reserved.
+ */
+/* end plugin : default */
+
+/* start plugin : mobile.android */
+.ui-android.ui-android-display {
+    width: 60px !important;
+    height: 60px !important;
+    margin: 0.5em 0px;
+}
+.ui-android > .ui-android-button {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+}
+.ui-android > .ui-android-button > .ui-btn-inner {
+    width: 32px;
+    height: 32px;
+    padding: 12px 14px;
+}
+/* end plugin : mobile.android */
+
+/* start plugin : mobile.alarm */
+.ui-android-alarm > .ui-android-button > .ui-btn-inner {
+    background: url("images/android_icon.png") no-repeat center;
+    background-position: 14px 13px;
+}
+.ui-android-alarm > .ui-android-button[data-theme='a'] > .ui-btn-inner,
+.ui-android-alarm > .ui-android-button[data-theme='b'] > .ui-btn-inner {
+    background: url("images/android_icon.png") no-repeat center;
+    background-position: 14px -52px;
+}
+/* end plugin : mobile.alarm */
+
+/* start plugin : mobile.bluetooth */
+.ui-android-bluetooth > .ui-android-button > .ui-btn-inner {
+    background: url("images/android_icon.png") no-repeat center;
+    background-position: -50px 13px;
+}
+.ui-android-bluetooth > .ui-android-button[data-theme='a'] > .ui-btn-inner,
+.ui-android-bluetooth > .ui-android-button[data-theme='b'] > .ui-btn-inner {
+    background: url("images/android_icon.png") no-repeat center;
+    background-position: -50px -52px;
+}
+/* end plugin : mobile.bluetooth */
+
+/* start plugin : mobile.calendar */
+.ui-android-calendar > .ui-android-button > .ui-btn-inner {
+    background: url("images/android_icon.png") no-repeat center;
+    background-position: -114px 13px;
+}
+.ui-android-calendar > .ui-android-button[data-theme='a'] > .ui-btn-inner,
+.ui-android-calendar > .ui-android-button[data-theme='b'] > .ui-btn-inner {
+    background: url("images/android_icon.png") no-repeat center;
+    background-position: -114px -52px;
+}
+/* end plugin : mobile.calendar */
+
+/* start plugin : mobile.call */
+.ui-android-call > .ui-android-button > .ui-btn-inner {
+    background: url("images/android_icon.png") no-repeat center;
+    background-position: -178px 13px;
+}
+.ui-android-call > .ui-android-button[data-theme='a'] > .ui-btn-inner,
+.ui-android-call > .ui-android-button[data-theme='b'] > .ui-btn-inner {
+    background: url("images/android_icon.png") no-repeat center;
+    background-position: -178px -52px;
+}
+/* end plugin : mobile.call */
+
+/* start plugin : mobile.contact */
+.ui-android-contact > .ui-android-button > .ui-btn-inner {
+    background: url("images/android_icon.png") no-repeat center;
+    background-position: -242px 13px;
+}
+.ui-android-contact > .ui-android-button[data-theme='a'] > .ui-btn-inner,
+.ui-android-contact > .ui-android-button[data-theme='b'] > .ui-btn-inner {
+    background: url("images/android_icon.png") no-repeat center;
+    background-position: -242px -52px;
+}
+/* end plugin : mobile.contact */
+
+/* start plugin : mobile.filebrowser */
+.ui-android-filebrowser > .ui-android-button > .ui-btn-inner {
+    background: url("images/android_icon.png") no-repeat center;
+    background-position: -306px 13px;
+}
+.ui-android-filebrowser > .ui-android-button[data-theme='a'] > .ui-btn-inner,
+.ui-android-filebrowser > .ui-android-button[data-theme='b'] > .ui-btn-inner {
+    background: url("images/android_icon.png") no-repeat center;
+    background-position: -306px -52px;
+}
+/* end plugin : mobile.filebrowser */
+
+/* start plugin : mobile.message */
+.ui-android-message > .ui-android-button > .ui-btn-inner {
+    background: url("images/android_icon.png") no-repeat center;
+    background-position: -370px 13px;
+}
+.ui-android-message > .ui-android-button[data-theme='a'] > .ui-btn-inner,
+.ui-android-message > .ui-android-button[data-theme='b'] > .ui-btn-inner {
+    background: url("images/android_icon.png") no-repeat center;
+    background-position: -370px -52px;
+}
+/* end plugin : mobile.message */
+
+/* start plugin : mobile.nfc */
+.ui-android-nfc > .ui-android-button > .ui-btn-inner {
+    background: url("images/android_icon.png") no-repeat center;
+    background-position: -434px 13px;
+}
+.ui-android-nfc > .ui-android-button[data-theme='a'] > .ui-btn-inner,
+.ui-android-nfc > .ui-android-button[data-theme='b'] > .ui-btn-inner {
+    background: url("images/android_icon.png") no-repeat center;
+    background-position: -434px -52px;
+}
+/* end plugin : mobile.nfc */

@@ -1,0 +1,207 @@
+.dvc-davinci-page-style > .ui-header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+.dvc-davinci-page-style > .ui-content {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+.dvc-davinci-page-style > .ui-footer {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+/* davinci style */
+
+.dvc-davinci-page-style form {
+	position: relative;
+}
+
+.dvc-davinci-page-style .ui-field-contain {
+	position: relative;
+}
+
+.dvc-davinci-page-style .ui-controlgroup {
+	position: relative;
+}
+
+.dvc-davinci-page-style .ui-listview {
+	position: relative;
+}
+
+.dvc-davinci-page-style .ui-grid-a,
+.dvc-davinci-page-style .ui-grid-b,
+.dvc-davinci-page-style .ui-grid-c,
+.dvc-davinci-page-style .ui-grid-d {
+	position: relative;
+}
+
+.dvc-davinci-page-style .ui-block-a,
+.dvc-davinci-page-style .ui-block-b,
+.dvc-davinci-page-style .ui-block-c,
+.dvc-davinci-page-style .ui-block-d ,
+.dvc-davinci-page-style .ui-block-e {
+	position: relative;
+}
+
+.dvc-davinci-page-style .ui-collapsible-set {
+	position: relative;
+}
+
+.dvc-davinci-page-style .ui-collapsible {
+	position: relative;
+}
+
+.dvc-davinci-page-style .ui-collapsible-set > .ui-collapsible {
+	position: relative !important;
+}
+
+.dvc-davinci-page-style .dvc-widget-wrapper, .dvc-widget-wrapper {
+	position: relative;
+}
+
+.dvc-inline {
+	display: inline-block;
+}
+
+.dvc-input-element,
+.dvc-img-element, .dvc-hr-element, .dvc-p-element,
+.dvc-h1-element, .dvc-h2-element, .dvc-h3-element,
+.dvc-h4-element, .dvc-h5-element, .dvc-h6-element,
+.dvc-a-element, .dvc-div-element  {
+	position: relative;
+}
+
+.dvc-p-element {
+	font-weight: initial;
+}
+
+
+.dvc-davinci-page-style .dvc-floating, .dvc-floating {
+	position: absolute;
+}
+
+.ui-input-text.dvc-floating {
+	width:initial;
+}
+
+.ui-hidden-accessible + .ui-slider {
+	width: 98%;
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.ui-controlgroup-horizontal .dvc-widget-wrapper { float: left; clear: none; margin: 0 -1px 0 0; }
+.ui-controlgroup-horizontal .dvc-widget-wrapper:last-child { margin-right: 0; }
+@media all and (min-width: 450px){
+	.ui-field-contain .ui-controlgroup-horizontal .ui-select { width: auto; }
+}
+
+.dvc-datasource {
+	position: absolute;
+	display: none;
+}
+
+.dvc-imagebutton {
+	position:relative;
+	cursor:pointer;
+	background-color: transparent;
+	background-repeat: no-repeat;
+	min-width: 30px;
+	min-height: 30px;
+}
+
+.dvc-imagebutton .dvc-imagebutton-text {
+	display:-webkit-box;
+	-webkit-box-align:center;
+	-webkit-box-pack:center;
+	position:absolute;
+	left:0px;
+	right:0px;
+	top:0px;
+	bottom:0px;
+	line-height: normal;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.dvc-imagebutton-tile {
+	background-repeat: repeat;
+}
+.dvc-imagebutton-stretch {
+	background-size: 100% 100%;
+}
+.dvc-imagebutton-zoom {
+	background-size: contain;
+	background-position: 50%;
+}
+.dvc-imagebutton-center {
+	background-position: center;
+}
+
+.dvc-iscrollview {
+	position: relative;
+	overflow: hidden;
+}
+
+.dvc-iscrollview-scroller {
+	display: block;
+	position: relative;
+}
+
+.dvc-iscrollview-pull {
+	background: #fff;
+	height: 40px;
+	line-height: 40px;
+	padding: 5px 10px;
+	border-bottom: 1px solid #ccc;
+	font-weight: bold;
+	font-size: 14px;
+	color: #888;
+}
+
+.dvc-iscrollview-pull-icon {
+	-webkit-transform: rotate(0deg) translateZ(0);
+}
+
+.dvc-iscrollview-pull .dvc-iscrollview-pull-icon {
+	display: block;
+	float: left;
+	width: 40px;
+	height: 40px;
+	background: url(images/pull-icon@2x.png) 0 0 no-repeat;
+	-webkit-background-size: 40px 80px; background-size:40px 80px;
+	-webkit-transition-property: -webkit-transform;
+	-webkit-transition-duration: 250ms;
+}
+
+.dvc-iscrollview-pull.dvc-iscrollview-pull-pulled .dvc-iscrollview-pull-icon {
+	-webkit-transform: rotate(-180deg) translateZ(0);
+}
+
+.dvc-iscrollview-pull.dvc-iscrollview-pull-loading .dvc-iscrollview-pull-icon {
+	background-position: 0 100%;
+	-webkit-transform: rotate(0deg) translateZ(0);
+	-webkit-transition-duration: 0ms;
+	-webkit-animation-name: loading;
+	-webkit-animation-duration: 2s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: linear;
+}
+
+@-webkit-keyframes loading {
+	from { -webkit-transform:rotate(0deg) translateZ(0); }
+	to { -webkit-transform:rotate(360deg) translateZ(0); }
+}
+
+.dvc-iscrollview .dvc-iscrollview-scroller > * {
+	margin: 0;
+}

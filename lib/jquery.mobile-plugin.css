@@ -1,0 +1,1069 @@
+/* start plugin : default */
+/*!
+ * SEC Web App SDK 1.0
+ *
+ * Copyright ¨Ï 2013 Samsung Electronics Co., Ltd. All rights reserved.
+ */
+/* end plugin : default */
+
+/* start plugin : default */
+[data-role^=wrapper] {
+    position: absolute;
+    border: none;
+    margin: 0;
+    padding: 0;
+    text-align:center;
+}
+
+[data-role^=wrapper] > div {
+    top: 0px;
+    left: 0px;
+}
+
+body {
+    -webkit-user-select: none;
+}
+
+div[data-role='content'] {
+   padding: 0px; 
+}
+/* end plugin : default */
+
+/* start plugin : mobile.dialog */
+.ui-dialog-contain {
+    opacity: 1 !important;
+    background: #FFFFFF !important;
+}
+
+.ui-dialog-background {
+    opacity: 0.5;
+    display: block !important;
+    z-index: 0;
+    -webkit-transition: opacity 0.5s ease-in;
+}
+ 
+.ui-dialog-background.pop.in {
+    opacity: 0.5;
+    -webkit-transition: opacity 0.5s ease-in;
+}
+
+.ui-dialog-background.pop.out {
+    opacity: 1;
+}
+ 
+.ui-dialog {
+    min-height: 100% !important;
+    background: transparent !important;
+}
+
+@-webkit-keyframes dfadein {
+    from { opacity: 1; }
+    to { opacity: 1; }
+}
+@-webkit-keyframes dfadeout {
+    from { opacity: 1; }
+    to { opacity: 1; }
+}
+.ui-dialog-background.fade.out {
+	opacity: 1;
+	-webkit-animation-name: dfadeout;
+}
+.ui-dialog-background.fade.in {
+	opacity: 1;
+	-webkit-animation-name: dfadein;
+}
+.ui-dialog-background.pop.in {
+    opacity: 1;
+	-webkit-animation-name: dpopin;
+}
+.ui-dialog-background.pop.out {
+	-webkit-animation-name: dfadeout;
+	opacity: 1;
+}
+.ui-dialog-background.pop.in.reverse {
+	-webkit-animation-name: dfadein;
+}
+.ui-dialog-background.pop.out.reverse {
+	-webkit-animation-name: dpopout;
+}
+@-webkit-keyframes dpopin {
+    from {
+        -webkit-transform: scale(.8);
+        opacity: 1;
+    }
+    to {
+        -webkit-transform: scale(1);
+        opacity: 1;
+    }
+}
+@-webkit-keyframes dpopout {
+    from {
+        -webkit-transform: scale(1);
+        opacity: 1;
+    }
+    to {
+        -webkit-transform: scale(.8);
+        opacity: 1;
+    }
+}
+
+.ui-controlgroup a.ui-slider-handle, a.ui-btn.ui-slider-handle { z-index: auto; }
+.ui-btn-text { z-index: auto; }
+.ui-checkbox, .ui-radio { z-index: auto; }
+.ui-checkbox .ui-btn, .ui-radio .ui-btn { z-index: auto; }
+.ui-checkbox input,.ui-radio input { z-index: auto; visibility: hidden; }
+.ui-disabled { z-index: auto; }
+/* end plugin : mobile.dialog */
+
+/* start plugin : mobile.picker */
+.ui-picker-item {
+    display: inline-block;
+    min-width: 45px;
+    height: 100px;
+    margin: 0px 1px;
+    background: #cbcce0;
+    background: linear-gradient(#2c2c38 0,#cbcce0 35%,#cbcce0 65%,#2c2c38 100%);
+    background: -webkit-gradient(linear,left bottom,left top,from(#2c2c38),color-stop(0.35,#cbcce0),color-stop(0.65,#cbcce0),to(#2c2c38));
+    background: -moz-linear-gradient(#2c2c38 0,#cbcce0 35%,#cbcce0 65%,#2c2c38 100%);
+    background: -o-linear-gradient(#2c2c38 0,#cbcce0 35%,#cbcce0 65%,#2c2c38 100%);
+    box-shadow: 0 1px 1px rgba(255,255,255,0.3);
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -webkit-box-shadow: 0 1px 1px rgba(255,255,255,0.3);
+}
+
+.ui-picker-wrapper-back {
+    display: inline-block;
+    margin: 0px 3px;
+    min-width: 39px;
+    height: 100px;
+    background: #fff;
+    background: linear-gradient(#333 0,#999 10%,#fff 30%,#fff 70%,#999 90%,#333 100%);
+    background: -webkit-gradient(linear,left bottom,left top,from(#333),color-stop(0.10,#999),color-stop(0.30,#fff),color-stop(0.70,#fff),color-stop(0.90,#999),to(#333));
+    background: -moz-linear-gradient(#333 0,#999 10%,#fff 30%,#fff 70%,#999 90%,#333 100%);
+    background: -o-linear-gradient(#333 0,#999 10%,#fff 30%,#fff 70%,#999 90%,#333 100%);
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    overflow: hidden;
+}
+
+.ui-picker-wrapper {
+    position: relative;
+    margin: 33px 0px;
+    min-width: 39px;
+    height: 34px;
+    background-color: transparent;
+    border: none;
+    font-size:20px;
+    font-weight:bold;
+    color:black;
+    overflow: visible !important;
+}
+
+.ui-picker-wrapper > .ui-picker-scroller {
+    margin: 0px;
+    border: none;
+    padding: 0px 10px;
+}
+
+.ui-picker-scroller > div {
+    margin: 0px;
+    height: 34px;
+    line-height: 34px;
+    vertical-align: middle;
+}
+
+.ui-picker-bar {
+    position: relative;
+    top: -69px;
+    width: 100%;
+    height: 28px;    
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    border-color: #7b8699;
+    background: #6f75b0;
+    background: linear-gradient(rgba(151,157,197,0.5) 50%,rgba(111,117,176,0.5) 50%);
+    background: -webkit-gradient(linear,left bottom,left top,color-stop(0.5,rgba(111,117,176,0.5)),color-stop(0.5,rgba(151,157,197,0.5)));
+    background: -moz-linear-gradient(rgba(151,157,197,0.5) 50%,rgba(111,117,176,0.5) 50%);
+    background: -o-linear-gradient(rgba(151,157,197,0.5) 50%,rgba(111,117,176,0.5) 50%);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+    opacity: 0.8;
+}
+
+.ui-input-state .ui-focus-column {
+    -webkit-box-shadow: inset 0px 0px 3px #ff0000;
+}
+/* end plugin : mobile.picker */
+
+/* start plugin : mobile.datepicker */
+.ui-datepicker {
+    user-select: none;
+     -webkit-user-select: none;
+    display: inline-block;
+    width:190px !important;
+    min-width:190px;
+    height:100px !important;
+    margin-top: 10px;
+    padding: 25px 20px;
+    text-align: center;
+    background: #50515d;
+    background: linear-gradient(#9f9fa6,#484a55 50%,#272836 50%,#282a39);
+    background: -webkit-gradient(linear,left top,left bottom,from(#9f9fa6),color-stop(0.5,#484a55),color-stop(0.5,#272836),to(#282a39));
+    background: -moz-linear-gradient(#9f9fa6,#484a55 50%,#272836 50%,#282a39);
+    background: -o-linear-gradient(#9f9fa6,#484a55 50%,#272836 50%,#282a39);
+}
+
+.ui-picker-scroller > .month, .ui-picker-scroller > .day {
+    text-align: right;
+}
+
+.ui-datepicker .ui-date-year .ui-picker-wrapper { width:64px; }
+.ui-datepicker .ui-date-month .ui-picker-wrapper { width:59px; }
+.ui-datepicker .ui-date-day .ui-picker-wrapper { width:42px; }
+/* end plugin : mobile.datepicker */
+
+/* start plugin : mobile.timepicker */
+.ui-timepicker {
+    user-select: none;
+     -webkit-user-select: none;
+    display: inline-block;    
+    width:160px !important;
+    min-width:160px;
+    height:100px !important;
+    margin-top: 10px;
+    padding: 25px 20px;
+    text-align: center;
+    background: #50515d;
+    background: linear-gradient(#9f9fa6,#484a55 50%,#272836 50%,#282a39);
+    background: -webkit-gradient(linear,left top,left bottom,from(#9f9fa6),color-stop(0.5,#484a55),color-stop(0.5,#272836),to(#282a39));
+    background: -moz-linear-gradient(#9f9fa6,#484a55 50%,#272836 50%,#282a39);
+    background: -o-linear-gradient(#9f9fa6,#484a55 50%,#272836 50%,#282a39);
+}
+
+.ui-picker-scroller > .hour, .ui-picker-scroller > .minute, .ui-picker-scroller > .ampm {
+    text-align: right;
+}
+
+.ui-time-ampm {
+    vertical-align: top;
+}
+
+.ui-timepicker .ui-time-hour .ui-picker-wrapper { width:42x; }
+.ui-timepicker .ui-time-minute .ui-picker-wrapper { width:42px; }
+.ui-timepicker .ui-time-ampm .ui-picker-wrapper { width:50px; }
+/* end plugin : mobile.timepicker */
+
+/* start plugin : mobile.schedule */
+.ui-calendar {
+    position: relative;
+    width : 280px !important;
+    -moz-user-focus: normal;
+    height: auto !important;
+}
+
+.ui-calendar:only-child {
+    margin: 0px;
+}
+
+.ui-calendar:focus {
+    border: solid 2px red;
+    /*height: 200px;*/
+}
+
+.ui-calendar .titlebar {
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    vertical-align: middle;
+    /*border: solid 1px red;*/
+}
+
+.ui-calendar .titlebar .prev {
+    display: inline-block;
+    float: left;
+    margin-top: 2px;
+    margin-left: 2px;
+}
+
+.ui-calendar .titlebar .title {
+    display: inline-block;
+    text-align: center;
+}
+
+.ui-calendar .titlebar .next {
+    display: inline-block;
+    float: right;
+    margin-top: 2px;
+    margin-right: 2px;
+}
+
+.ui-calendar .dayarea {
+    width: 100%;
+    /*height: 170px;*/
+    /*border: solid 1px blue;*/
+    border-collapse:collapse;
+}
+
+.ui-calendar .dayarea th,
+.ui-calendar .dayarea .ui-day {
+    text-align: center;
+    vertical-align: middle;
+    /*border: solid 1px green;*/
+    border:none;
+}
+
+.ui-calendar .dayarea tr {
+    height: 30px;
+}
+
+.ui-calendar .dayarea .ui-btn-active {
+    font-weight: normal;
+}
+
+.ui-calendar .dayarea .ui-prev-month, 
+.ui-calendar .dayarea .ui-next-month {
+    color: gray;
+}
+/* end plugin : mobile.schedule */
+
+/* start plugin : mobile.menu */
+/* base nav styles */  
+.ui-menu { display:block; margin: auto 10px; position:relative; /*font:16px bold Tahoma, Sans-serif;*/ }
+.ui-menu:only-child { margin: 0px; }  
+
+.ui-menu ul { min-height: 20px; padding:0; margin:0; display: inline-block; -webkit-appearance: none; }  
+.ui-menu > ul { display:block; }
+.ui-menu li { min-height: 20px; position:relative; list-style-type:none; display: inline-block; -webkit-appearance: none; }  
+.ui-menu > ul > li { padding:10px 20px; }  
+.ui-menu span { display:inline-block; }  
+.ui-menu ul.ui-submenu { z-index: 100; display:none; position:absolute; }  
+.ui-menu ul.ui-submenu li { float:none; display: inline-block; }  
+.ui-menu ul.ui-submenu .ui-node { padding:5px 10px; white-space: pre; }
+/* end plugin : mobile.menu */
+
+/* start plugin : mobile.progressbar */
+.ui-progressbar {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    min-height: 10px;
+    min-width: 10px;
+    height: 20px;
+    padding: 0px;
+    margin: .5em 0;
+}
+
+.ui-progressbar-bg {
+    border: none;
+    height: 100%;
+    width: 30%;
+}
+/* end plugin : mobile.progressbar */
+
+/* start plugin : mobile.indicator */
+.ui-indicator {
+    padding: 4px;
+    text-align: center;
+    font-size: 1.2em;
+    min-width: 10px;
+    min-height: 24px;
+    overflow: hidden;
+}
+
+.a {
+    color: #fff;
+}
+.b {
+    color: #295b8e;
+}
+.c {
+    color: #000;
+}
+.d {
+    color: #aaa;
+}
+.e {
+    color: #f2c43d;
+}
+
+.a > .ui-indicator-dot {
+    background-color: #949294;
+}
+.b > .ui-indicator-dot {
+    background-color: #6facd5;
+}
+.c > .ui-indicator-dot {
+    background-color: #e5e5e5;
+}
+.d > .ui-indicator-dot {
+    background-color: #fff;
+    border: 1px solid #aaa;
+}
+.e > .ui-indicator-dot {
+    background-color: #ffea6f;
+}
+
+.a > .ui-indicator-dot.ui-indicator-dot-focus {
+    background-color: #fff;
+}
+.b > .ui-indicator-dot.ui-indicator-dot-focus {
+    background-color: #295b8e;
+}
+.c > .ui-indicator-dot.ui-indicator-dot-focus {
+    background-color: #bbb;
+}
+.d > .ui-indicator-dot.ui-indicator-dot-focus {
+    background-color: #aaa;
+}
+.e > .ui-indicator-dot.ui-indicator-dot-focus {
+    background-color: #f2c43d;
+}
+/* end plugin : mobile.indicator */
+
+/* start plugin : mobile.barindicator */
+.ui-barindicator > div {
+    display: inline-block;
+    min-width: 4px;
+    height: 6px;
+    margin: 0px 1%;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+/* end plugin : mobile.barindicator */
+
+/* start plugin : mobile.circleindicator */
+.ui-circleindicator > div {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0px 1%;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+/* end plugin : mobile.circleindicator */
+
+/* start plugin : mobile.numberindicator */
+.ui-numberindicator > span {
+    margin: 0px 1%;
+}
+/* end plugin : mobile.numberindicator */
+
+/* start plugin : default */
+/* aligned label, button */
+.aligned {
+    height: 42px;
+    padding: 0px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.aligned > *:only-child {
+    display: table;
+    text-align: inherit;
+    vertical-align: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    color: inherit;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+}
+
+.aligned > *:only-child > *:only-child {
+    display: table-cell;
+    text-align: inherit;
+    vertical-align: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    color: inherit;
+    margin: 0px;
+    padding: 0px 10px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+/* end plugin : default */
+
+/* start plugin : mobile.label */
+.ui-label {
+    background : transparent;
+    margin: .5em 0;
+    border: none;
+    text-align: left;
+}
+/* end plugin : mobile.label */
+
+/* start plugin : mobile.mediacontrol */
+.ui-mediacontrol {
+    position: relative;
+    margin: 5px;
+    padding: 0px;
+    height: 24px;
+}
+
+.ui-mediacontrol .ui-slider-input {
+    display: none;
+}
+
+div.ui-mediacontrol > * {
+    position: absolute;
+    top: 0px;
+    margin: 0px !important;
+    font-weight: normal;
+}
+
+.ui-mediacontrol > * {
+    height: 22px;
+    padding: 0px;
+}
+
+.ui-mediacontrol > *.ui-btn {
+    background-color: transparent;
+    background-image: url(images/btn_player.png);
+    background-repeat: no-repeat;
+    background-size: 220px;
+}
+.ui-mediacontrol.ui-bar-c > *.ui-btn,
+.ui-mediacontrol.ui-bar-d > *.ui-btn,
+.ui-mediacontrol.ui-bar-e > *.ui-btn {
+    background-position-y: 1px;
+}
+.ui-mediacontrol.ui-bar-a > *.ui-btn,
+.ui-mediacontrol.ui-bar-b > *.ui-btn,
+.ui-mediacontrol.ui-bar-f > *.ui-btn,
+.ui-mediacontrol.ui-bar-g > *.ui-btn {
+    background-position-y: -39px;
+}
+
+.ui-mediacontrol > .ui-btn-play {
+    background-position-x: 1px;
+    left: 0px;
+    width: 22px;
+}
+
+.ui-mediacontrol > .ui-btn-play.on {
+    background-position-x: -40px;
+}
+
+.ui-mediacontrol > .ui-slider-progress + .ui-slider {
+    top: 5px;
+    left: 34px;
+    right: 120px;
+    width: auto;
+}
+
+.ui-mediacontrol > .ui-slider-volume + .ui-slider {
+    top: 5px;
+    right: 58px;
+    width: 50px;
+}
+
+.ui-mediacontrol > .ui-btn-mute  {
+    background-position-x: -118px;
+    right: 24px;
+    width: 22px;
+}
+
+.ui-mediacontrol > .ui-btn-mute.on {
+    background-position-x: -78px;
+}
+
+.ui-mediacontrol > .ui-btn-fullscreen {
+    background-position-x: -159px;
+    right: 0px;
+    width: 22px;
+}
+
+.ui-mediacontrol > .ui-btn-fullscreen.on {
+    background-position-x: -198px;
+}
+/* end plugin : mobile.mediacontrol */
+
+/* start plugin : mobile.video */
+.ui-video {
+    position: relative;
+    text-align: center;
+    min-width: 240px;
+    min-height: 100px;
+    /* 320px;*/
+    height: 240px;
+    overflow: hidden;
+}
+
+.ui-video .videoarea {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    border: 0px;
+}
+
+.ui-video .video {
+    width: 100%;
+    height: 100%;
+}
+
+.ui-video .block {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+}
+
+.ui-video > .ui-mediacontrol.ui-hidden {
+    bottom: -24px;
+}
+
+.ui-video > .ui-mediacontrol.ui-shown {
+    bottom: 0px;
+}
+
+@-webkit-keyframes hide {
+    from {
+        bottom: 0px;
+    }
+    to {
+        bottom: -24px;
+    }
+}
+
+@-webkit-keyframes show {
+    from {
+        bottom: -24px;
+    }
+    to {
+        bottom: 0px;
+    }
+}
+
+.ui-video > .ui-mediacontrol.ani.ui-hidden {
+  -webkit-animation-name: hide;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-iteration-count: 1;
+}
+
+.ui-video > .ui-mediacontrol.ani.ui-shown {
+  -webkit-animation-name: show;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-iteration-count: 1;
+}
+
+.ui-video > .ui-mediacontrol {
+    position: absolute;
+    height: 24px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    margin: 0px;
+    border-width: 1px 0 0 0;
+    overflow: hidden;
+}
+
+.ui-video.fullscreen {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    width: auto;
+    height: auto;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    z-index: 1000;
+}
+/* end plugin : mobile.video */
+
+/* start plugin : mobile.audio */
+.ui-audio {
+    position: relative;
+    text-align: center;
+    /* width: 320px; */
+    min-width: 240px;
+    height: 24px !important;
+}
+
+.ui-audio .audio {
+    width: 320px;
+    height: 0px;
+}
+
+.ui-audio > .ui-mediacontrol {
+    position: absolute;
+    height: 24px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    margin: 0px;
+    border-width: 1px 0 0 0;
+}
+
+.ui-audio .ui-mediacontrol > .ui-slider-progress + .ui-slider {
+    left: 34px;
+    right: 120px;
+}
+
+.ui-audio .ui-mediacontrol > .ui-slider-volume + .ui-slider {
+    right: 34px;
+    width: 74px;
+}
+
+.ui-audio .ui-mediacontrol > .ui-btn-mute  {
+    right: 0px;
+    width: 22px;
+}
+
+.ui-audio .ui-mediacontrol > .ui-btn-fullscreen {
+    display: none;
+}
+/* end plugin : mobile.audio */
+
+/* start plugin : mobile.rectangle */
+.ui-rectangle {
+    min-width: 10px;
+    min-height: 10px;
+    width: 60px;
+    height: 60px;
+    border: 1px solid #000;
+    z-index: 1;
+    background: #fff;
+}
+/* end plugin : mobile.rectangle */
+
+/* start plugin : mobile.circle */
+.ui-circle {
+    min-width: 10px;
+    min-height: 10px;
+    width: 60px;
+    height: 60px;
+    border: 1px solid #000;
+    border-radius: 50% 50% !important;
+    z-index: 1;
+    background: #fff;
+}
+/* end plugin : mobile.circle */
+
+/* start plugin : mobile.line */
+.ui-line {
+    min-width: 10px;
+    min-height: 10px;
+    width: 60px;
+    height: 60px;
+    z-index: 1;
+}
+.ui-line > .horizontal {
+    position: relative;
+    top: 50%;
+    width: 100%;
+    border-top: 1px solid #000;
+    border-bottom: none !important;
+    border-left: none !important;
+    border-right: none !important;
+}
+.ui-line > .vertical {
+    position: relative;
+    left: 50%;
+    height: 100%;
+    border-left: 1px solid #000;
+    border-top: none !important;
+    border-bottom: none !important;
+    border-right: none !important;
+}
+/* end plugin : mobile.line */
+
+/* start plugin : mobile.maps */
+.ui-maps {
+    min-width: 200px;
+    height: 100px;
+    min-height: 100px;
+}
+.ui-maps.ui-maps-unable {
+    text-align: center;
+    color: grey;
+    background: #fff;
+    opacity: 0.8;
+}
+.ui-maps > .ui-maps-unable-text {
+    position:relative;
+    top: 40%;
+    font-size: 30px;    
+}
+/* end plugin : mobile.maps */
+
+/* start plugin : mobile.imageview */
+.ui-imageview {
+    margin-right: 0px;
+    min-width: 60px;
+    height: 60px;
+    background-color: #000;
+    overflow: hidden;
+}
+.ui-imageview img {
+    display: none;
+}
+.ui-imageview > .ui-imageview-content {
+    position: relative;
+    height: 100%;
+}
+.ui-imageview > .ui-imageview-content > div {
+    position: absolute;
+    width: 100%;
+    height: inherit;
+    text-align: center;
+    -webkit-user-select: none;
+}
+.ui-imageview .ui-imageview-prev {
+    left: -100%;
+}
+.ui-imageview .ui-imageview-center {
+    left: 0%;
+}
+.ui-imageview .ui-imageview-next {
+    left: 100%;
+}
+
+.ui-imageview > .ui-imageview-content .ui-imageview-image {
+    vertical-align: middle;
+    height: inherit;
+    width: inherit;
+    display: block;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.ui-imageview .ui-imageview-org-position {
+    -webkit-transform: translate(0px,0px);
+}
+.ui-imageview .ui-imageview-transition {
+    -webkit-transition: all 250ms ease-out 0ms;
+}
+/* end plugin : mobile.imageview */
+
+/* start plugin : mobile.tabview */
+.ui-tabview {
+    position: relative;
+    min-height: 100px;
+    overflow: hidden;
+}
+
+.ui-tabview > .ui-tabview-nav {
+    list-style:none;
+    margin: 0px;
+    white-space: nowrap;
+    position: absolute;
+    z-index: 1;
+    font-size: 16px;
+}
+.ui-tabview.top > .ui-tabview-nav {
+    top: 0px;
+    padding: 6px 12px 0px;
+    height: 30px;
+}
+.ui-tabview.bottom > .ui-tabview-nav {
+    bottom: 0px;
+    padding: 0px 12px 6px;
+    height: 30px;
+}
+.ui-tabview.left > .ui-tabview-nav {
+    top: 0px;
+    bottom: 0px;
+    width: 114px;
+    padding: 12px 0px 6px 6px;
+}
+.ui-tabview.right > .ui-tabview-nav {
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    width: 114px;
+    padding: 12px 6px 6px 0px;
+}
+.ui-tabview > .ui-tabview-nav > li {
+    list-style: none;
+    position: relative;
+    top: 0px;
+    text-align: center;
+    border: 1px #aaa solid;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+}
+.ui-tabview.top > .ui-tabview-nav > li {
+    display: inline-block;
+    margin: 0px 3px 0px 0px;
+    padding: 6px 14px 2px;
+    min-width: 20px;
+    border-bottom-width: 0;
+}
+.ui-tabview.bottom > .ui-tabview-nav > li {
+    display: inline-block;
+    margin: 0px 3px 0px 0px;
+    padding: 2px 14px 6px;
+    min-width: 20px;
+    border-top-width: 0;
+}
+.ui-tabview.left > .ui-tabview-nav > li {
+    display: block;
+    margin: 0px 0px 3px 0px;
+    padding: 6px 14px 6px;
+    min-width: 20px;
+    border-right-width: 0;
+    text-overflow: ellipsis;
+}
+.ui-tabview.right > .ui-tabview-nav > li {
+    display: block;
+    margin: 0px 0px 3px 0px;
+    padding: 6px 14px 6px;
+    min-width: 20px;
+    border-left-width: 0;
+    text-overflow: ellipsis;
+}
+.ui-tabview > .ui-tabview-nav > li.selected {
+    background: #fff;
+    color: #000;
+    text-shadow: none;
+}
+.ui-tabview.top > .ui-tabview-nav > li.selected {
+    padding-bottom: 3px;
+}
+.ui-tabview.bottom > .ui-tabview-nav > li.selected {
+    padding-top: 3px;
+}
+.ui-tabview.left > .ui-tabview-nav > li.selected {
+    margin-right: -1px;
+}
+.ui-tabview.right > .ui-tabview-nav > li.selected {
+    margin-left: -1px;
+}
+.ui-tabview > .ui-tabview-wrapper {
+    position: absolute;
+    background: #fff;
+    padding: 12px 22px;
+    border: 1px #aaa solid;
+    overflow: hidden;
+}
+.ui-tabview.top > .ui-tabview-wrapper {
+    top: 35px;
+    bottom: 0px;
+    left: 0px;
+    right:0px;
+}
+.ui-tabview.bottom > .ui-tabview-wrapper {
+    top: 0px;
+    bottom: 35px;
+    left: 0px;
+    right:0px;
+}
+.ui-tabview.left > .ui-tabview-wrapper {
+    top: 0px;
+    bottom: 0px;
+    left: 120px;
+    right:0px;
+}
+.ui-tabview.right > .ui-tabview-wrapper {
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right:120px;
+}
+.ui-tabview > .ui-tabview-wrapper > .ui-tabitem {
+    width: 100%;
+    height: 100%;
+}
+.ui-tabview > .ui-tabview-wrapper > .ui-tabitem {
+    display: none;
+}
+.ui-tabview > .ui-tabview-wrapper > .ui-tabitem.show {
+    display: block;
+}
+/* end plugin : mobile.tabview */
+
+/* start plugin : mobile.treeview */
+.ui-treeview {
+    min-height: 40px;
+    overflow: auto;
+    padding: 12px 2px;
+    white-space: nowrap;
+}
+.ui-treeview ul, .ui-treeview li {
+    padding: 0px;
+    list-style-type: none;
+    min-height: 20px;
+}
+.ui-treeview ul {
+    margin: 0;
+}
+.ui-treeview li {
+    margin: 0.2em 1em;
+    cursor: pointer;
+}
+.ui-treeview .ui-treeview-marker {
+    vertical-align: text-top !important;
+}
+.ui-treeview .ui-treeview-marker, .ui-treeview .ui-treeview-icon, .ui-treeview .ui-treeview-checkbox { 
+    display: inline-block;
+    vertical-align: text-bottom;
+    width: 1em;
+    height: 1em;
+    background-repeat: no-repeat;
+    background-color: transparent;
+}
+.ui-treeview .ui-treeview-root.open > .ui-treeview-marker {
+    background-image: url("images/treeview_icon.png");
+    background-position: -18px 0px;
+}
+.ui-treeview .ui-treeview-root.closed > .ui-treeview-marker {
+    background-image: url("images/treeview_icon.png");
+    background-position: 0px 0px;
+}
+.ui-treeview .ui-treeview-checkbox {
+    margin-left: 4px;
+    background-image: url("images/treeview_icon.png");
+    background-position: -2px -19px;
+}
+.ui-treeview .checked > .ui-treeview-checkbox {
+    background-image: url("images/treeview_icon.png");
+    background-position: -38px -19px;
+}
+.ui-treeview .undetermined > .ui-treeview-checkbox {
+    background-image: url("images/treeview_icon.png");
+    background-position: -20px -19px;
+}
+.ui-treeview .ui-treeview-root.closed > ul {
+    display: none;
+}
+.ui-treeview-li-item {
+    -webkit-user-select: none;
+    border-radius: 0.2em;
+    padding: 1px 6px 2px 6px;
+}
+.ui-treeview-li-item > .ui-treeview-icon {
+    margin: 0px 3px 0px -4px;
+}
+.ui-treeview .ui-bar-a {
+    font-weight: normal;
+    border: none;
+}
+.ui-treeview .ui-bar-b {
+    font-weight: normal;
+    border: none;
+}
+.ui-treeview .ui-bar-c {
+    font-weight: normal;
+    border: none;
+}
+.ui-treeview .ui-bar-d {
+    font-weight: normal;
+    border: none;
+}
+.ui-treeview .ui-bar-e {
+    font-weight: normal;
+    border: none;
+}
+/* end plugin : mobile.treeview */

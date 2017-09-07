@@ -1,209 +1,194 @@
 <!DOCTYPE html>
 <html class="ui-mobile" >
-<!--    
-MoonCalc Web App for calculating age of the Moon, phase of the Moon, and 
-distance from the Moon to the center of Earth. 
-For residents of Northern, Southern Hemispheres, and Equator.  
+    <!--    
+    MoonCalc Mobile Web App for calculating and displaying Age of the Moon, 
+    Phase of the Moon, and Distance from the Moon to the center of Earth. 
+    For residents of the Northern Hemisphere, the Southern Hemisphere, 
+    and the Equator.
 
-Copyright (C) 2011-2017  A.V.T. Software (Sole Proprietorship Vita Tolstikova)
+    Copyright (C) 2011-2017  A.V.T. Software (Sole Proprietorship Vita Tolstikova)
 
-@author Andrei Tolstikov
-@author Vita Tolstikova
+    @author Andrei Tolstikov
+    @author Vita Tolstikova
 
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
 
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
 
-You should have received a copy of the GNU General Public License
-along with this program.  If not, see <http://www.gnu.org/licenses/>.
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-Includes DaVinci SDK (http://davincisdk.blogspot.com/)
+    Includes DaVinci SDK (http://davincisdk.blogspot.com/)
 
-contact website: https://software.avt.dn.ua
-contact E-mail: support@software.avt.dn.ua
--->      
-<head >
-	<meta charset="utf-8" >
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi">
-	
-	<link rel="stylesheet" type="text/css" href="lib/jquery.mobile-1.2.0.css" >
-	<link rel="stylesheet" type="text/css" href="lib/jquery.mobile-plugin.css" >
-	<link rel="stylesheet" type="text/css" href="lib/jquery.mobile-plugin.mobile.css" >
-	<link rel="stylesheet" type="text/css" href="lib/davinci.css" >
-	<link rel="stylesheet" type="text/css" href="lib/scale.css" >
-	<link rel="stylesheet" type="text/css" href="default.css">
-			 
-	<script type="text/javascript" src="lib/jquery.js" ></script>
-	<script type="text/javascript" src="lib/globalize.js" ></script>
-	<script type="text/javascript" src="lib/jquery.mobile-1.2.0.js" ></script>
-	<script type="text/javascript" src="lib/jquery.mobile-plugin.js" ></script>
-	<script type="text/javascript" src="lib/jquery.mobile-plugin.mobile.js" ></script>
-	<script type="text/javascript" src="lib/knockout.js" ></script>
-	<script type="text/javascript" src="lib/davinci.js" ></script>
-	<script type="text/javascript" src="lib/adjustview.js" ></script>
-	<script type="text/javascript" src="js/controller.js" ></script>
-	<script type="text/javascript" src="js/auto-start.js" ></script>
-	<script type="text/javascript" src="main.js" ></script>
+    contact website: https://software.avt.dn.ua
+    contact E-mail: support@software.avt.dn.ua
+    -->      
+    <head>
+            <meta charset="utf-8" >
+            <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi">
 
-        
-	<!-- Add check Internet connection functions -->
-	<script type="text/javascript" src="js/network.js"></script>
+            <link rel="stylesheet" type="text/css" href="lib/jquery.mobile-1.2.0.css" >
+            <link rel="stylesheet" type="text/css" href="lib/jquery.mobile-plugin.css" >
+            <link rel="stylesheet" type="text/css" href="lib/jquery.mobile-plugin.mobile.css" >
+            <link rel="stylesheet" type="text/css" href="lib/davinci.css" >
+            <link rel="stylesheet" type="text/css" href="lib/scale.css" >
+            <link rel="stylesheet" type="text/css" href="css/style.css">
 
-	<!-- Add main actions functions -->
-	<script type="text/javascript" src="js/main_actions.js"></script>
+            <script type="text/javascript" src="lib/jquery.js" ></script>
+            <script type="text/javascript" src="lib/globalize.js" ></script>
+            <script type="text/javascript" src="lib/jquery.mobile-1.2.0.js" ></script>
+            <script type="text/javascript" src="lib/jquery.mobile-plugin.js" ></script>
+            <script type="text/javascript" src="lib/jquery.mobile-plugin.mobile.js" ></script>
+            <script type="text/javascript" src="lib/knockout.js" ></script>
+            <script type="text/javascript" src="lib/davinci.js" ></script>
+            <script type="text/javascript" src="lib/adjustview.js" ></script>
+            <script type="text/javascript" src="js/controller.js" ></script>
+            <script type="text/javascript" src="js/auto-start.js" ></script>
+            <script type="text/javascript" src="js/main.js" ></script>
+            <script type="text/javascript" src="js/moon_calc.js"></script>
 
-	
-	<!-- The handlers for calculations moon params -->
-	<script type="text/javascript" src="js/moon_calc.js"></script>
-	
-	
-	<title >Moon Calc Mobile Web App</title>
-</head>
-<body onload="getGeoPosition()">
-	<!-- page#1 -- MoonCalc (main) -->
-	<div data-role="page" id="page1_MoonCalc" class="dvc-davinci-page-style">
-		<div data-role="header" id="Header1_MoonCalc">
-			<h1>Moon Calc Mobile Web App</h1>
-			<a href="#page2_Info" data-role="button" id="InfoButton" class="ui-btn-right" data-icon="info" data-iconpos="right">Info</a>
-		</div>
-		
-		<div data-role="content" id="Content1_MoonCalc" class="hidden">
-			
-			<!-- Previous date button -->
-			<div id="prev_date">
-				<button data-theme="a" > &lt; </button>
-			</div>
-			
-			<!-- MoonPhase -->
-			<div id="moon_container">
-				<img src="">
-			</div>
-			
-			<!-- Next date button -->
-			<div id="next_date">
-				<button data-theme="a">  &gt; </button>
-				<!-- 
-					<a href="#" data-role="button" id="NextDateButton"> > </a> 
-				-->
-			</div>	
-			
-			<!-- Current Date -->
-			<div id="curr_date">
-			</div>
-			
-			<!-- Hemisphere (Northern, Southern or Equator) -->
-			<div id="hemisphere">
-			</div>
-			
-			<!-- Moon parameters -->
-			<div id="age_of_moon"></div>
-			<div id="moon_phase"></div>
-			<div id="moon_distance"></div>	
-			
-			<!-- Now button -->
-			<div id="now">
-				<button data-theme="a">Now</button>
-			</div>
-		
-		</div>
-		
-		<div data-role="popup" id="networkErrorPopup"  class="ui-content">
-                    <a href="#" id="PopupCloseButton" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
-                    <h1>Network problems</h1>
-                    <p>Please check the connection to the Internet.</p>
-                    <p>And then repeat the request for information about the user's location using the "Refresh" button.</p>
-                    <p>Note! Mobile operator may charge additional fee for data transfer.</p>
-                    <p>If there is no Internet connection, the calculation of the parameters of the Moon is performed only for the Northern Hemisphere.</p>
+            <title >MoonCalc Mobile Web App</title>
+    </head>
+    <body>
+        <!-- page#1 - MoonCalc (main page) -->
+        <div data-role="page" id="page1_MoonCalc" class="dvc-davinci-page-style">
+            <div data-role="header" id="Header1_MoonCalc">
+                <h1>MoonCalc Mobile Web App</h1>
+                <a href="#page2_About" data-role="button" id="AboutButton" class="ui-btn-right" data-icon="info" data-iconpos="right">About</a>
+            </div>
+
+            <div data-role="content" id="Content1_MoonCalc" class="hidden">
+                <!-- Previous date button -->
+                <div id="prev_date">
+                    <button data-theme="a" > &lt; </button>
+                </div>
+
+                <!-- The Moon Phase image-->
+                <div id="moon_container">
+                    <img src="">
+                </div>
+
+                <!-- Next date button -->
+                <div id="next_date">
+                    <button data-theme="a">  &gt; </button>
                 </div>	
-		
-		<div data-role="footer" id="Footer1">
-			<h1>&copy; 2011-2017 A.V.T. Software (Sole Proprietorship Vita Tolstikova)</h1>
-			<a data-role="button" id="RefreshButton" class="ui-btn-right" data-icon="refresh" data-iconpos="right">Refresh</a>
-		</div>
-	</div>
-	
-	<!-- page#2 -- Info -->
-	<div data-role="page" id="page2_Info" class="dvc-davinci-page-style" data-add-back-btn="true">
-		<div data-role="header" id="Header2_Info">
-			<h1>About</h1>
-		</div>
-		<div data-role="content" id="Content2_Info">
-			
-			<div id="webapps_name">
-			  Moon Calc Mobile Web App
-			</div>
-			
-			<div id="webapps_version">
-				Version 1.1
-			</div>
-			
-			<div id="contact_info">
-				<div>
-					Contacts:
-				</div>
-				<div id="avt_url">
-					<a href="https://software.avt.dn.ua">https://software.avt.dn.ua</a>
-				</div>
-				<div>
-	  				support@software.avt.dn.ua   
-	 			</div>
-				
-				<div id="user_agreement">
-					<!-- 
-					<a href="#page3" data-role="button" id="LinkButton2" class="ui-btn-center">User agreement</a>
-					-->	
-					<button data-theme="a">User agreement</button>	
-				</div>
-				
-			</div>
-						
-		</div>
-		<div data-role="footer" id="Footer2">
-			<h1>&copy; 2011-2017 A.V.T. Software (Sole Proprietorship Vita Tolstikova)</h1>
-		</div>
-	</div>
-	
-	
-	<!-- page#3 -- User agreement -->
-	<div data-role="page" id="page3_UserAgreement" class="dvc-davinci-page-style" data-add-back-btn="true">
-		<div data-role="header" id="Header3_UserAgreement">
-			<h1>User agreement</h1>
-		</div>
-		
-		<div data-role="content" id="Content3_UserAgreement">
-		
-			<div id="user_agreement_info"> 
-				You understand and agree that the MoonCalc Mobile Web App is provided "AS IS" without warranty of any kind.
-			</div>
-		    
-			<div id="user_agreement_info">
-				The MoonCalc Mobile Web App is used the&nbsp;W3C Geolocation API (GeoIP) technology to determine the position of the user. For correct display of the Moon for the residents of the Northern and Southern hemispheres. And the Equator.
-			</div>
-			
-			<div id="user_agreement_info">
-				For any other purposes location data of the user are not used.
-			</div>
-		 
-			<div id="user_agreement_info">
-                            <b>Note:</b> When downloading or updating data in the Web App by clicking "Refresh" button mobile operator may charge additional fee for data transfer.
-			</div>	
-			
-			<div id="user_agreement_info">
-				If there is no Internet connection, the calculation of the parameters of the Moon is performed only for the Northern Hemisphere.	
-			</div>			
-		</div>
 
-		<div data-role="footer" id="Footer3">
-			<h1>&copy; 2011-2017 A.V.T. Software (Sole Proprietorship Vita Tolstikova)</h1>
-		</div>
-	</div>
-	
-	
-</body>
+                <!-- Current Date -->
+                <div id="curr_date">
+                </div>
+
+                <!-- Hemisphere (Northern, Southern or Equator) -->
+                <div id="hemisphere">
+                </div>
+
+                <!-- The Moon parameters -->
+                <div id="age_of_moon"></div>
+                <div id="moon_phase"></div>
+                <div id="moon_distance"></div>	
+
+                <!-- Now button -->
+                <div id="now">
+                    <button data-theme="a">Now</button>
+                </div>
+            </div>
+
+             <div data-role="popup" id="locationAccessDontAllowPopup"  class="ui-content">
+                <a href="#" id="PopupClosebutton" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+                <h1>The user did not allow browser access to the location or problems with network</h1>
+                <ol>
+                    <li>Check the connection to the Internet</li>
+                    <li>Reload the current page for repeat the request for information about the user's location</li>
+                    <li>Allow Location Access</li>
+                </ol>
+                <p><b>Note:</b> Mobile operator may charge additional fee for data transfer.</p>
+                <p>If there is no Internet connection, the calculation of the parameters of the Moon is performed only for the Northern Hemisphere.</p>
+            </div>
+
+            <div data-role="footer" id="Footer1">
+                <h1>&copy; 2011-2017 A.V.T. Software (Sole Proprietorship Vita Tolstikova)</h1>
+            </div>
+        </div>
+
+        <!-- page#2 - About -->
+        <div data-role="page" id="page2_About" class="dvc-davinci-page-style" data-add-back-btn="true">
+            <div data-role="header" id="Header2_About">
+                <h1>About</h1>
+            </div>
+            <div data-role="content" id="Content2_About">
+                <div id="webapps_name">
+                  MoonCalc Mobile Web App
+                </div>
+
+                <div id="webapps_version">
+                    Version 1.0.3
+                </div>
+
+                <div id="contact_info">
+                    <div>
+                        Contacts:
+                    </div>
+                    <div id="avt_url">
+                        <a href="https://software.avt.dn.ua" target="_blank">https://software.avt.dn.ua</a>
+                    </div>
+                    
+                    <div id="avt_email">
+                        <a href="mailto:support@software.avt.dn.ua">support@software.avt.dn.ua</a>   
+                    </div>
+
+                    <div id="user_agreement">
+                        <button data-theme="a">User agreement</button>	
+                    </div>
+                </div>
+
+            </div>
+            <div data-role="footer" id="Footer2">
+                <h1>&copy; 2011-2017 A.V.T. Software (Sole Proprietorship Vita Tolstikova)</h1>
+            </div>
+        </div>
+
+        <!-- page#3 - User agreement -->
+        <div data-role="page" id="page3_UserAgreement" class="dvc-davinci-page-style" data-add-back-btn="true">
+            <div data-role="header" id="Header3_UserAgreement">
+                <h1>User agreement</h1>
+            </div>
+
+            <div data-role="content" id="Content3_UserAgreement">
+
+                <div id="user_agreement_info"> 
+                    MoonCalc Mobile Web App for calculating Age of the Moon, Phase of the Moon, and Distance from the Moon to the center of Earth. For residents of the Northern Hemisphere the Southern Hemisphere, and the Equator.
+                </div>
+
+
+                <div id="user_agreement_info"> 
+                    You understand and agree that the MoonCalc Mobile Web App is provided "AS IS" without warranty of any kind.
+                </div>
+
+                <div id="user_agreement_info">
+                    The MoonCalc Mobile Web App is used the&nbsp;W3C Geolocation API (GeoIP) technology to determine the position of the user. For correct display of the Moon for the residents of the Northern Hemisphere, Southern Hemisphere, and the Equator.
+                </div>
+
+                <div id="user_agreement_info">
+                    For any other purposes location data of the user are not used.
+                </div>
+
+                <div id="user_agreement_info">
+                    <b>Note:</b>When updating data in the MoonCalc Web App by reload the current page mobile operator may charge additional fee for data transfer.
+                </div>	
+
+                <div id="user_agreement_info">
+                    If there is no Internet connection, the calculation of the parameters of the Moon is performed only for the Northern Hemisphere.
+                </div>			
+            </div>
+
+            <div data-role="footer" id="Footer3">
+                <h1>&copy; 2011-2017 A.V.T. Software (Sole Proprietorship Vita Tolstikova)</h1>
+            </div>
+        </div>
+    </body>
 </html>

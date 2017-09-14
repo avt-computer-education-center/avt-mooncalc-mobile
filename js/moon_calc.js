@@ -614,6 +614,9 @@ moonCalcModuleNameSpace = function() {
         if (typeHemisphereStr==="Northern" || typeHemisphereStr==="Southern"){
             typeHemisphereStr+=" Hemishere";
         }
+        else {
+            typeHemisphereStr = 'Equator';
+        }
 
         //Output Age of the Moon, Phase of the Moon, 
         //Distance from the Moon to the center of Earth

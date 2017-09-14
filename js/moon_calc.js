@@ -613,9 +613,8 @@ moonCalcModuleNameSpace = function() {
         // output Hemisphere
         if (typeHemisphereStr==="Northern" || typeHemisphereStr==="Southern"){
             typeHemisphereStr+=" Hemishere";
-        }
-        else {
-            typeHemisphereStr = 'Equator';
+        } else { 
+            typeHemisphereStr = 'Equator'; 
         }
 
         //Output Age of the Moon, Phase of the Moon, 

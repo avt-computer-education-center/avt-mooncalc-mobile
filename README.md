@@ -17,23 +17,15 @@ In honor of the 15th Anniversary of [A.V.T. - Компьютерный учеб�
 
 
 ## 2. Using MoonCalc Mobile Web App
-    
-    2.1 When the index.html file is opened in the browser, the user needs 
-        to allow the Web App to determine the current user location 
-        in order to correctly display Age of the Moon, Phase of the Moon, 
-		and Distance from the Moon to the center of Earth. 
-		For residents of the Northern Hemisphere, the Southern Hemisphere, and Equator.
-    
-    2.2 In the current release you can calculate the Moon parameters not only for the current time, 
-		but for the past and future days. The "Now" button can always go back to the calculation 
-		the Moon parameters for the current time. For the four main Phases of the Moon (New Moon, 
-		First Quarter, Full Moon, Last Quarter) displays their names.
-		
-	2.3 The "About" button in the header opens the page with information about MoonCalc Mobile Web App.
-		The "Back" button in the header returns to the previous (Main) page.
-		
-		2.3.1 The "User Agreement" button on the "About" page opens the page with User Agreement information.
-	
+
+2.1 When the index.html file is opened in the browser, the user needs to allow the Web App to determine the current user location in order to correctly display Age of the Moon, Phase of the Moon, and Distance from the Moon to the center of Earth. For residents of the Northern Hemisphere, the Southern Hemisphere, and Equator.
+
+2.2 In the current release you can calculate the Moon parameters not only for the current time, but for the past and future days. The "Now" button can always go back to the calculation the Moon parameters for the current time. For the four main Phases of the Moon (New Moon, First Quarter, Full Moon, Last Quarter) displays their names.
+
+2.3 The "About" button in the header opens the page with information about MoonCalc Mobile Web App. The "Back" button in the header returns to the previous (Main) page.
+
+2.3.1 The "User Agreement" button on the "About" page opens the page with User Agreement information.
+
 ## 3. Compatibility
 
     3.1 The MoonCalc Mobile Web App has been successfully tested in the following desktop 

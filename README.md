@@ -11,7 +11,7 @@ The technology of responsive design was used when creating the user interface.
 
 The MoonCalc Mobile Web App was designed for educational and cognitive purposes.
 
-In August, 2017 the [A.V.T. Software team] (https://software.avt.dn.ua) has made a decision to publish the MoonCalc Mobile Web App on GitHUB as an open source project.
+In August, 2017 the **A.V.T. Software team** has made a decision to publish the MoonCalc Mobile Web App on GitHUB (https://github.com/SP-Vita-Tolstikova/mooncalc-mobile) as an open source project.
 
 In honor of the 15th Anniversary of [A.V.T. - Компьютерный учебный центр] (https://avt.dn.ua).
 

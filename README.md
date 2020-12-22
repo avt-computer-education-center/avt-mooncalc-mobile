@@ -1,31 +1,22 @@
 # MoonCalc Web App v 1.0.3 
-=============================
+
 
 ## 1. About MoonCalc Mobile Web App project
-----------------------------------------
 
-    The Moon is one of the most enigmatic and mystical planets of the Solar system.
-    Change of phases of the Moon exerts impact on events which take place in the world, 
-	on behavior of people, their feelings.
+The Moon is one of the most enigmatic and mystical planets of the Solar system. Change of phases of the Moon exerts impact on events which take place in the world, on behavior of people, their feelings.
 
-    A.V.T. Software (Sole Proprietorship Vita Tolstikova) presents MoonCalc Mobile Web App 
-	for calculating and displaying Age of the Moon, Phase of the Moon, 
-	and Distance from the Moon to the center of Earth. For residents of the Northern Hemisphere, 
-	the Southern Hemisphere, and Equator.
-    MoonCalc Mobile Web App uses the W3C Geolocation API (GeoIP). 
-	The technology of responsive design was used when creating the user interface.
-    
-    The MoonCalc Mobile Web App was designed for educational and cognitive purposes.
+**A.V.T. Software (Sole Proprietorship Vita Tolstikova)** presents **MoonCalc Mobile Web App** for calculating and displaying Age of the Moon, Phase of the Moon, and Distance from the Moon to the center of Earth. For residents of the Northern Hemisphere, the Southern Hemisphere, and Equator. MoonCalc Mobile Web App uses the W3C Geolocation API (GeoIP). 
 
-    In August 2017 the [A.V.T. Software team] (https://software.avt.dn.ua)
-    has made a decision to publish the MoonCalc Mobile Web App on GitHUB 
-    as an open source project.
-    
-    In honor of the 15th Anniversary of [A.V.T. - Компьютерный учебный центр] (https://avt.dn.ua).
+The technology of responsive design was used when creating the user interface.
+
+The MoonCalc Mobile Web App was designed for educational and cognitive purposes.
+
+In August, 2017 the [A.V.T. Software team] (https://software.avt.dn.ua) has made a decision to publish the MoonCalc Mobile Web App on GitHUB as an open source project.
+
+In honor of the 15th Anniversary of [A.V.T. - Компьютерный учебный центр] (https://avt.dn.ua).
 
 
 ## 2. Using MoonCalc Mobile Web App
----------------------------------
     
     2.1 When the index.html file is opened in the browser, the user needs 
         to allow the Web App to determine the current user location 
@@ -44,7 +35,7 @@
 		2.3.1 The "User Agreement" button on the "About" page opens the page with User Agreement information.
 	
 ## 3. Compatibility
------------------		
+
     3.1 The MoonCalc Mobile Web App has been successfully tested in the following desktop 
         browsers:
             - FireFox v 55.0.2

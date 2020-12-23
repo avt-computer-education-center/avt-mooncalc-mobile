@@ -38,14 +38,23 @@ In honor of the 15th Anniversary of [A.V.T. - Компьютерный учеб�
 
 
 ## 4. Used web technologies, libraries and frameworks
+
 4.1 HTML5
+
 4.2 CSS3
+
 4.3 JavaScript
+
 4.4 [jQuery JavaScript Library v1.8.3] (http://jquery.com/) by John Resig
+
 4.5 [jQuery Mobile Framework v1.2.0] (http://jquerymobile.com/) , Copyright 2012 jQuery Foundation and other contributors
+
 4.6 [DaVinci SDK (SEC Web App SDK 1.0)] (http://davincisdk.blogspot.com/ ), Copyright (c) 2013 Samsung Electronics Co., Ltd.
+
 4.7 [Knockout JavaScript library] (http://knockoutjs.com/) by Steve Sanderson
+
 4.8 [W3C Geolocation API library] (https://www.w3.org/TR/geolocation-API/) by the W3C
+
 
 
 ## 5. Release notes for MoonCalc Web App
